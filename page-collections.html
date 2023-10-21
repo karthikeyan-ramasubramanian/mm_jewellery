@@ -67,6 +67,51 @@
       href="../../../fonts.googleapis.com/css2ed52.css?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Style the popup form container */
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.6
+        ); /* Semi-transparent black background */
+        backdrop-filter: blur(5px); /* Apply blur effect */
+        z-index: 998; /* Below the popup, but above the other content */
+      }
+
+      .popup-form {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 999; /* Ensure it's above other content */
+      }
+
+      /* Style the form elements */
+      .form-group {
+        margin-bottom: 10px;
+      }
+
+      /* Style the close button */
+      .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+    </style>
   </head>
 
   <body class="home home-5">
@@ -164,253 +209,6 @@
                       </nav>
                     </div>
                   </div>
-
-                  <!-- <div
-							class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 header-right"
-						  >
-							<div class="header-page-link">
-							 
-							  <div class="search-box">
-								<div class="search-toggle">
-								  <i class="icon-search"></i>
-								</div>
-							  </div>
-		
-						   
-							  <div class="login-header icon">
-								<a class="active-login" href="#"
-								  ><i class="icon-user"></i
-								></a>
-								<div class="form-login-register">
-								  <div class="box-form-login">
-									<div class="active-login"></div>
-									<div class="box-content">
-									  <div class="form-login active">
-										<form
-										  id="login_ajax"
-										  method="post"
-										  class="login"
-										>
-										  <h2>Sign in</h2>
-										  <p class="status"></p>
-										  <div class="content">
-											<div class="username">
-											  <input
-												type="text"
-												required="required"
-												class="input-text"
-												name="username"
-												id="username"
-												placeholder="Your name"
-											  />
-											</div>
-											<div class="password">
-											  <input
-												class="input-text"
-												required="required"
-												type="password"
-												name="password"
-												id="password"
-												placeholder="Password"
-											  />
-											</div>
-											<div class="rememberme-lost">
-											  <div class="rememberme">
-												<input
-												  name="rememberme"
-												  type="checkbox"
-												  id="rememberme"
-												  value="forever"
-												/>
-												<label for="rememberme" class="inline"
-												  >Remember me</label
-												>
-											  </div>
-											  <div class="lost_password">
-												<a href="forgot-password.html"
-												  >Lost your password?</a
-												>
-											  </div>
-											</div>
-											<div class="button-login">
-											  <input
-												type="submit"
-												class="button"
-												name="login"
-												value="Login"
-											  />
-											</div>
-											<div class="button-next-reregister">
-											  Create An Account
-											</div>
-										  </div>
-										</form>
-									  </div>
-									  <div class="form-register">
-										<form method="post" class="register">
-										  <h2>REGISTER</h2>
-										  <div class="content">
-											<div class="email">
-											  <input
-												type="email"
-												class="input-text"
-												placeholder="Email"
-												name="email"
-												id="reg_email"
-												value=""
-											  />
-											</div>
-											<div class="password">
-											  <input
-												type="password"
-												class="input-text"
-												placeholder="Password"
-												name="password"
-												id="reg_password"
-											  />
-											</div>
-											<div class="button-register">
-											  <input
-												type="submit"
-												class="button"
-												name="register"
-												value="Register"
-											  />
-											</div>
-											<div class="button-next-login">
-											  Already has an account
-											</div>
-										  </div>
-										</form>
-									  </div>
-									</div>
-								  </div>
-								</div>
-							  </div>
-		
-							 
-							  <div class="wishlist-box">
-								<a href="shop-wishlist.html"
-								  ><i class="icon-heart"></i
-								></a>
-								<span class="count-wishlist">1</span>
-							  </div>
-		
-							 
-							  <div class="mojuri-topcart dropdown light">
-								<div class="dropdown mini-cart top-cart">
-								  <div class="remove-cart-shadow"></div>
-								  <a
-									class="dropdown-toggle cart-icon"
-									href="#"
-									role="button"
-									data-toggle="dropdown"
-									aria-haspopup="true"
-									aria-expanded="false"
-								  >
-									<div class="icons-cart">
-									  <i class="icon-large-paper-bag"></i
-									  ><span class="cart-count">2</span>
-									</div>
-								  </a>
-								  <div class="dropdown-menu cart-popup">
-									<div class="cart-empty-wrap">
-									  <ul class="cart-list">
-										<li class="empty">
-										  <span>No products in the cart.</span>
-										  <a class="go-shop" href="shop-grid-left.html"
-											>GO TO SHOP<i
-											  aria-hidden="true"
-											  class="arrow_right"
-											></i
-										  ></a>
-										</li>
-									  </ul>
-									</div>
-									<div class="cart-list-wrap">
-									  <ul class="cart-list">
-										<li class="mini-cart-item">
-										  <a
-											href="#"
-											class="remove"
-											title="Remove this item"
-											><i class="icon_close"></i
-										  ></a>
-										  <a
-											href="shop-details.html"
-											class="product-image"
-											><img
-											  width="600"
-											  height="600"
-											  src="media/product/3.jpg"
-											  alt=""
-										  /></a>
-										  <a
-											href="shop-details.html"
-											class="product-name"
-											>Twin Hoops</a
-										  >
-										  <div class="quantity">Qty: 1</div>
-										  <div class="price">$150.00</div>
-										</li>
-										<li class="mini-cart-item">
-										  <a
-											href="#"
-											class="remove"
-											title="Remove this item"
-											><i class="icon_close"></i
-										  ></a>
-										  <a
-											href="shop-details.html"
-											class="product-image"
-											><img
-											  width="600"
-											  height="600"
-											  src="media/product/1.jpg"
-											  alt=""
-										  /></a>
-										  <a
-											href="shop-details.html"
-											class="product-name"
-											>Medium Flat Hoops</a
-										  >
-										  <div class="quantity">Qty: 1</div>
-										  <div class="price">$100.00</div>
-										</li>
-									  </ul>
-									  <div class="total-cart">
-										<div class="title-total">Total:</div>
-										<div class="total-price">
-										  <span>$250.00</span>
-										</div>
-									  </div>
-									  <div class="free-ship">
-										<div class="title-ship">
-										  Buy <strong>$400</strong> more to enjoy
-										  <strong>FREE Shipping</strong>
-										</div>
-										<div class="total-percent">
-										  <div class="percent" style="width: 20%"></div>
-										</div>
-									  </div>
-									  <div class="buttons">
-										<a
-										  href="shop-cart.html"
-										  class="button btn view-cart btn-primary"
-										  >View cart</a
-										>
-										<a
-										  href="shop-checkout.html"
-										  class="button btn checkout btn-default"
-										  >Check out</a
-										>
-									  </div>
-									</div>
-								  </div>
-								</div>
-							  </div>
-							</div>
-						  </div> -->
                 </div>
               </div>
             </div>
@@ -429,14 +227,15 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="content">
-                          <h2 class="title">Spring <br />Collections</h2>
+                          <h2 class="title">Rings</h2>
                           <div class="description">
                             Brighten up your look with vibrant gemstone jewelry.
                           </div>
                           <a
                             class="button button-white button-outline thick-border button-arrow animation-horizontal"
-                            href="shop-grid-left.html"
-                            >Explore All</a
+                            href="javascript:void(0);"
+                            onclick="openPopupForm('Rings')"
+                            >Order Now</a
                           >
                         </div>
                       </div>
@@ -462,14 +261,15 @@
                       <div class="col-md-6"></div>
                       <div class="col-md-6">
                         <div class="content">
-                          <h2 class="title">Curated by <br />Color</h2>
+                          <h2 class="title">Necklaces</h2>
                           <div class="description">
                             Introducing your outfit’s missing link.
                           </div>
                           <a
                             class="button button-white button-outline thick-border button-arrow animation-horizontal"
-                            href="shop-grid-left.html"
-                            >Explore All</a
+                            href="javascript:void(0);"
+                            onclick="openPopupForm('Necklaces')"
+                            >Order Now</a
                           >
                         </div>
                       </div>
@@ -485,14 +285,15 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="content">
-                          <h2 class="title">Make the <br />Connection</h2>
+                          <h2 class="title">Earrings</h2>
                           <div class="description">
                             Brighten up your look with vibrant gemstone jewelry.
                           </div>
                           <a
                             class="button button-white button-outline thick-border button-arrow animation-horizontal"
-                            href="shop-grid-left.html"
-                            >Explore All</a
+                            href="javascript:void(0);"
+                            onclick="openPopupForm('Earrings')"
+                            >Order Now</a
                           >
                         </div>
                       </div>
@@ -510,14 +311,15 @@
                       <div class="col-md-6"></div>
                       <div class="col-md-6">
                         <div class="content">
-                          <h2 class="title">Rings <br />Collections</h2>
+                          <h2 class="title">Charms</h2>
                           <div class="description">
                             Introducing your outfit’s missing link.
                           </div>
                           <a
                             class="button button-white button-outline thick-border button-arrow animation-horizontal"
-                            href="shop-grid-left.html"
-                            >Explore All</a
+                            href="javascript:void(0);"
+                            onclick="openPopupForm('Charms')"
+                            >Order Now</a
                           >
                         </div>
                       </div>
@@ -638,494 +440,69 @@
         </div>
       </footer>
     </div>
+    <!-- form -->
+    <div class="overlay" id="overlay"></div>
 
+    <div class="popup-form" id="popupForm">
+      <span class="close-button" onclick="closePopupForm()">&times;</span>
+      <h2>Contact Form</h2>
+      <form id="contactForm" onsubmit="constructWhatsAppMessage(event)">
+        <div class="form-group">
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            id="name"
+            placeholder="Your Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            placeholder="Your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            class="form-control"
+            name="mobile"
+            id="mobile"
+            placeholder="Your Mobile Number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="jewelType"
+            id="jewelType"
+            placeholder="Jewel Type"
+            required
+          />
+        </div>
+        <div class="modal-footer" style="justify-content: center">
+          <button
+            type="button"
+            onclick="closePopupForm()"
+            class="btn btn-secondary"
+          >
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+      </form>
+    </div>
     <!-- Back Top button -->
     <div class="back-top button-show">
       <i class="arrow_carrot-up"></i>
     </div>
-
-    <!-- Search -->
-    <div class="search-overlay">
-      <div class="close-search"></div>
-      <div class="wrapper-search">
-        <form
-          role="search"
-          method="get"
-          class="search-from ajax-search"
-          action="#"
-        >
-          <a href="#" class="search-close"></a>
-          <div class="search-box">
-            <button id="searchsubmit" class="btn" type="submit">
-              <i class="icon-search"></i>
-            </button>
-            <input
-              type="text"
-              autocomplete="off"
-              value=""
-              name="s"
-              class="input-search s"
-              placeholder="Search..."
-            />
-            <div class="content-menu_search">
-              <label>Suggested</label>
-              <ul id="menu_search" class="menu">
-                <li><a href="#">Earrings</a></li>
-                <li><a href="#">Necklaces</a></li>
-                <li><a href="#">Bracelets</a></li>
-                <li><a href="#">Jewelry Box</a></li>
-              </ul>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <!-- Wishlist -->
-    <div class="wishlist-popup">
-      <div class="wishlist-popup-inner">
-        <div class="wishlist-popup-content">
-          <div class="wishlist-popup-content-top">
-            <span class="wishlist-name">Wishlist</span>
-            <span class="wishlist-count-wrapper"
-              ><span class="wishlist-count">2</span></span
-            >
-            <span class="wishlist-popup-close"></span>
-          </div>
-          <div class="wishlist-popup-content-mid">
-            <table class="wishlist-items">
-              <tbody>
-                <tr class="wishlist-item">
-                  <td class="wishlist-item-remove"><span></span></td>
-                  <td class="wishlist-item-image">
-                    <a href="shop-details.html">
-                      <img
-                        width="600"
-                        height="600"
-                        src="media/product/3.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </td>
-                  <td class="wishlist-item-info">
-                    <div class="wishlist-item-name">
-                      <a href="shop-details.html">Twin Hoops</a>
-                    </div>
-                    <div class="wishlist-item-price">
-                      <span>$150.00</span>
-                    </div>
-                    <div class="wishlist-item-time">June 4, 2022</div>
-                  </td>
-                  <td class="wishlist-item-actions">
-                    <div class="wishlist-item-stock">In stock</div>
-                    <div class="wishlist-item-add">
-                      <div data-title="Add to cart">
-                        <a rel="nofollow" href="#">Add to cart</a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr class="wishlist-item">
-                  <td class="wishlist-item-remove"><span></span></td>
-                  <td class="wishlist-item-image">
-                    <a href="shop-details.html">
-                      <img
-                        width="600"
-                        height="600"
-                        src="media/product/4.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </td>
-                  <td class="wishlist-item-info">
-                    <div class="wishlist-item-name">
-                      <a href="shop-details.html"
-                        >Yilver And Turquoise Earrings</a
-                      >
-                    </div>
-                    <div class="wishlist-item-price">
-                      <del aria-hidden="true"><span>$150.00</span></del>
-                      <ins><span>$100.00</span></ins>
-                    </div>
-                    <div class="wishlist-item-time">June 4, 2022</div>
-                  </td>
-                  <td class="wishlist-item-actions">
-                    <div class="wishlist-item-stock">In stock</div>
-                    <div class="wishlist-item-add">
-                      <div data-title="Add to cart">
-                        <a rel="nofollow" href="#">Add to cart</a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="wishlist-popup-content-bot">
-            <div class="wishlist-popup-content-bot-inner">
-              <a class="wishlist-page" href="shop-wishlist.html">
-                Open wishlist page
-              </a>
-              <span class="wishlist-continue" data-url="">
-                Continue shopping
-              </span>
-            </div>
-            <div class="wishlist-notice wishlist-notice-show">
-              Added to the wishlist!
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Compare -->
-    <div class="compare-popup">
-      <div class="compare-popup-inner">
-        <div class="compare-table">
-          <div class="compare-table-inner">
-            <a href="#" id="compare-table-close" class="compare-table-close">
-              <span class="compare-table-close-icon"></span>
-            </a>
-            <div class="compare-table-items">
-              <table id="product-table" class="product-table">
-                <thead>
-                  <tr>
-                    <th>
-                      <a href="#" class="compare-table-settings">Settings</a>
-                    </th>
-                    <th>
-                      <a href="shop-details.html">Twin Hoops</a>
-                      <span class="remove">remove</span>
-                    </th>
-                    <th>
-                      <a href="shop-details.html">Medium Flat Hoops</a>
-                      <span class="remove">remove</span>
-                    </th>
-                    <th>
-                      <a href="shop-details.html">Bold Pearl Hoop Earrings</a>
-                      <span class="remove">remove</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="tr-image">
-                    <td class="td-label">Image</td>
-                    <td>
-                      <a href="shop-details.html">
-                        <img
-                          width="600"
-                          height="600"
-                          src="media/product/3.jpg"
-                          alt=""
-                        />
-                      </a>
-                    </td>
-                    <td>
-                      <a href="shop-details.html">
-                        <img
-                          width="600"
-                          height="600"
-                          src="media/product/1.jpg"
-                          alt=""
-                        />
-                      </a>
-                    </td>
-                    <td>
-                      <a href="shop-details.html">
-                        <img
-                          width="600"
-                          height="600"
-                          src="media/product/2.jpg"
-                          alt=""
-                        />
-                      </a>
-                    </td>
-                  </tr>
-                  <tr class="tr-sku">
-                    <td class="td-label">SKU</td>
-                    <td>VN00189</td>
-                    <td></td>
-                    <td>D1116</td>
-                  </tr>
-                  <tr class="tr-rating">
-                    <td class="td-label">Rating</td>
-                    <td>
-                      <div class="star-rating">
-                        <span style="width: 80%"></span>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="star-rating">
-                        <span style="width: 100%"></span>
-                      </div>
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr class="tr-price">
-                    <td class="td-label">Price</td>
-                    <td><span class="amount">$150.00</span></td>
-                    <td>
-                      <del><span class="amount">$150.00</span></del>
-                      <ins><span class="amount">$100.00</span></ins>
-                    </td>
-                    <td><span class="amount">$200.00</span></td>
-                  </tr>
-                  <tr class="tr-add-to-cart">
-                    <td class="td-label">Add to cart</td>
-                    <td>
-                      <div data-title="Add to cart">
-                        <a href="#" class="button">Add to cart</a>
-                      </div>
-                    </td>
-                    <td>
-                      <div data-title="Add to cart">
-                        <a href="#" class="button">Add to cart</a>
-                      </div>
-                    </td>
-                    <td>
-                      <div data-title="Add to cart">
-                        <a href="#" class="button">Add to cart</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr class="tr-description">
-                    <td class="td-label">Description</td>
-                    <td>
-                      Phasellus sed volutpat orci. Fusce eget lore mauris
-                      vehicula elementum gravida nec dui. Aenean aliquam varius
-                      ipsum, non ultricies tellus sodales eu. Donec dignissim
-                      viverra nunc, ut aliquet magna posuere eget.
-                    </td>
-                    <td>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur.
-                    </td>
-                    <td>
-                      The EcoSmart Fleece Hoodie full-zip hooded jacket provides
-                      medium weight fleece comfort all year around. Feel better
-                      in this sweatshirt because Hanes keeps plastic bottles of
-                      landfills by using recycled polyester.7.8 ounce fleece
-                      sweatshirt made with up to 5 percent polyester created
-                      from recycled plastic.
-                    </td>
-                  </tr>
-                  <tr class="tr-content">
-                    <td class="td-label">Content</td>
-                    <td>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum. Sed ut
-                      perspiciatis unde omnis iste natus error sit voluptatem
-                      accusantium doloremque laudantium, totam rem aperiam,
-                      eaque ipsa quae ab illo inventore veritatis et quasi
-                      architecto beatae vitae dicta sunt explicabo. Nemo enim
-                      ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                      fugit, sed quia consequuntur magni dolores eos qui ratione
-                      voluptatem sequi nesciunt. Neque porro quisquam est, qui
-                      dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                      velit, sed quia non numquam eius modi tempora incidunt ut
-                      labore et dolore magnam aliquam quaerat voluptatem.
-                    </td>
-                    <td>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum. Sed ut
-                      perspiciatis unde omnis iste natus error sit voluptatem
-                      accusantium doloremque laudantium, totam rem aperiam,
-                      eaque ipsa quae ab illo inventore veritatis et quasi
-                      architecto beatae vitae dicta sunt explicabo. Nemo enim
-                      ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                      fugit, sed quia consequuntur magni dolores eos qui ratione
-                      voluptatem sequi nesciunt. Neque porro quisquam est, qui
-                      dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                      velit, sed quia non numquam eius modi tempora incidunt ut
-                      labore et dolore magnam aliquam quaerat voluptatem.
-                    </td>
-                    <td>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum. Sed ut
-                      perspiciatis unde omnis iste natus error sit voluptatem
-                      accusantium doloremque laudantium, totam rem aperiam,
-                      eaque ipsa quae ab illo inventore veritatis et quasi
-                      architecto beatae vitae dicta sunt explicabo. Nemo enim
-                      ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                      fugit, sed quia consequuntur magni dolores eos qui ratione
-                      voluptatem sequi nesciunt. Neque porro quisquam est, qui
-                      dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                      velit, sed quia non numquam eius modi tempora incidunt ut
-                      labore et dolore magnam aliquam quaerat voluptatem.
-                    </td>
-                  </tr>
-                  <tr class="tr-dimensions">
-                    <td class="td-label">Dimensions</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
-                    <td>N/A</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Quickview -->
-    <div class="quickview-popup">
-      <div id="quickview-container">
-        <div class="quickview-container">
-          <a href="#" class="quickview-close"></a>
-          <div class="quickview-notices-wrapper"></div>
-          <div class="product single-product product-type-simple">
-            <div class="product-detail">
-              <div class="row">
-                <div class="img-quickview">
-                  <div class="product-images-slider">
-                    <div id="quickview-slick-carousel">
-                      <div class="images">
-                        <div class="scroll-image">
-                          <div class="slick-wrap">
-                            <div
-                              class="slick-sliders image-additional"
-                              data-dots="true"
-                              data-columns4="1"
-                              data-columns3="1"
-                              data-columns2="1"
-                              data-columns1="1"
-                              data-columns="1"
-                              data-nav="true"
-                            >
-                              <div class="img-thumbnail slick-slide">
-                                <a
-                                  href="media/product/3.jpg"
-                                  class="image-scroll"
-                                  title=""
-                                >
-                                  <img
-                                    width="900"
-                                    height="900"
-                                    src="media/product/3.jpg"
-                                    alt=""
-                                  />
-                                </a>
-                              </div>
-                              <div class="img-thumbnail slick-slide">
-                                <a
-                                  href="media/product/3-2.jpg"
-                                  class="image-scroll"
-                                  title=""
-                                >
-                                  <img
-                                    width="900"
-                                    height="900"
-                                    src="media/product/3-2.jpg"
-                                    alt=""
-                                  />
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="quickview-single-info">
-                  <div class="product-content-detail entry-summary">
-                    <h1 class="product-title entry-title">Twin Hoops</h1>
-                    <div class="price-single">
-                      <div class="price">
-                        <del><span>$150.00</span></del>
-                        <span>$100.00</span>
-                      </div>
-                    </div>
-                    <div class="product-rating">
-                      <div
-                        class="star-rating"
-                        role="img"
-                        aria-label="Rated 4.00 out of 5"
-                      >
-                        <span style="width: 80%"
-                          >Rated <strong class="rating">4.00</strong> out of 5
-                          based on <span class="rating">1</span> customer
-                          rating</span
-                        >
-                      </div>
-                      <a href="#" class="review-link"
-                        >(<span class="count">1</span> customer review)</a
-                      >
-                    </div>
-                    <div class="description">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis…
-                      </p>
-                    </div>
-                    <form
-                      class="cart"
-                      method="post"
-                      enctype="multipart/form-data"
-                    >
-                      <div class="quantity-button">
-                        <div class="quantity">
-                          <button type="button" class="plus">+</button>
-                          <input
-                            type="number"
-                            class="input-text qty text"
-                            step="1"
-                            min="1"
-                            max=""
-                            name="quantity"
-                            value="1"
-                            title="Qty"
-                            size="4"
-                            placeholder=""
-                            inputmode="numeric"
-                            autocomplete="off"
-                          />
-                          <button type="button" class="minus">-</button>
-                        </div>
-                        <button
-                          type="submit"
-                          class="single-add-to-cart-button button alt"
-                        >
-                          Add to cart
-                        </button>
-                      </div>
-                      <button class="button quick-buy">Buy It Now</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Newsletter Popup -->
 
     <!-- Page Loader -->
     <div class="page-preloader">
@@ -1141,7 +518,52 @@
     <script src="libs/bootstrap/js/bootstrap.min.js"></script>
     <script src="libs/slick/js/slick.min.js"></script>
     <script src="libs/mmenu/js/jquery.mmenu.all.min.js"></script>
+    <script>
+      // Function to open the popup form
+      function openPopupForm(jewelType) {
+        const popupForm = document.getElementById("popupForm");
+        const jewelTypeInput = document.getElementById("jewelType");
+        const overlay = document.getElementById("overlay");
+        jewelTypeInput.value = jewelType;
+        popupForm.style.display = "block";
+        overlay.style.display = "block";
+        body.style.overflow = "hidden";
+      }
 
+      // Function to close the popup form
+      function closePopupForm() {
+        const popupForm = document.getElementById("popupForm");
+        const overlay = document.getElementById("overlay");
+        const body = document.body;
+
+        popupForm.style.display = "none";
+        overlay.style.display = "none";
+        body.style.overflow = "auto";
+      }
+    </script>
+    <script>
+      function constructWhatsAppMessage(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const mobile = document.getElementById("mobile").value;
+        const jewelType = document.getElementById("jewelType").value;
+        const popupForm = document.getElementById("popupForm");
+
+        // Construct the WhatsApp message, including the jewel type
+        const message = `Hello, this is ${name}. I'm interested in a ${jewelType}. My email is ${email}, and my mobile number is ${mobile}.`;
+
+        // Construct the WhatsApp message URL
+        const whatsappUrl = `https://wa.me/+919444985694?text=${encodeURIComponent(
+          message
+        )}`;
+
+        // Redirect to WhatsApp with the constructed message
+        window.location.href = whatsappUrl;
+        popupForm.style.display = "none";
+      }
+    </script>
     <!-- Site Scripts -->
     <script src="assets/js/app.js"></script>
   </body>
