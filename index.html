@@ -379,7 +379,7 @@
                                       <h3 class="title-banner">
                                         24K Gold
                                       </h3>
-                                      <p id="price24k" style="color:#b12a2a" class="button">Loading...</p>
+                                      <p id="price24k" style="color:#ff0909;font-size: 20px;" class="button">Loading...</p>
                                     </div>
                                   </div>
                                 </div>
@@ -405,7 +405,7 @@
                                   <div class="info">
                                     <div class="content">
                                       <h3 class="title-banner">22K Gold</h3>
-                                      <p class="button" style="color:#b12a2a" id="price22k">loading...</p>
+                                      <p class="button" style="color:#ff0909;font-size: 20px;" id="price22k">loading...</p>
                                     </div>
                                   </div>
                                 </div>
@@ -431,9 +431,9 @@
                                   <div class="info">
                                     <div class="content">
                                       <h3 class="title-banner">
-                                        24 karat gold
+                                        24K Silver
                                       </h3>
-                                      <p id="silverprice24k" style="color:#b12a2a" class="button">Loading...</p>
+                                      <p id="silverprice24k" style="color:#ff0909;font-size: 20px;" class="button">Loading...</p>
                                     </div>
                                   </div>
                                 </div>
@@ -1469,21 +1469,12 @@
       </div>
     </div>
     <script>
-      //
-     
-  // 
+  
       async function fetchGoldRate() {
-        var myHeaders = new Headers();
-myHeaders.append("x-access-token", "goldapi-4anpxrlo05gvif-io");
-myHeaders.append("Content-Type", "application/json");
-
-var requestOptions = {
+       
+fetch("https://gold-api-f2jo.onrender.com/goldPrices", {
   method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow'
-};
-
-fetch("https://www.goldapi.io/api/XAU/INR", requestOptions)
+})
   .then(response => response.json())
   .then(data =>  {
     // console.log(data.price_gram_24k)
@@ -1506,17 +1497,11 @@ fetch("https://www.goldapi.io/api/XAU/INR", requestOptions)
      
   // 
       async function fetchGoldRate() {
-        var myHeaders = new Headers();
-myHeaders.append("x-access-token", "goldapi-4anpxrlo05gvif-io");
-myHeaders.append("Content-Type", "application/json");
+       
 
-var requestOptions = {
+fetch("https://gold-api-f2jo.onrender.com/silverPrices",  {
   method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow'
-};
-
-fetch("https://www.goldapi.io/api/XAG/INR", requestOptions)
+})
   .then(response => response.json())
   .then(data =>  {
     // console.log(data.price_gram_24k)
