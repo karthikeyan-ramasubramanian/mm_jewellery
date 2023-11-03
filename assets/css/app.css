@@ -6179,7 +6179,7 @@ body i[class~=slick-arrow][class~=fa-angle-right] {
 }
 
 [class~=site-header] [class~=site-logo] img {
-  max-height: 24pt;
+
 }
 
 .site-header {
@@ -6419,6 +6419,7 @@ body i[class~=slick-arrow][class~=fa-angle-right] {
 
 [class~=site-header] [class~=site-logo] img {
   width: auto;
+  height: 100px;
 }
 
 .mini-cart .cart-popup .cart-list li.empty .go-shop {
