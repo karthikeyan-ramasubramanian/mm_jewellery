@@ -2103,7 +2103,7 @@ input[type=password] {
 }
 
 [class~=section][class~=bg-img-5] {
-  background-image: url("../../media/banner/bg-img-5.jpg");
+  background-image: url("../../assets/img/24kgold.jpg");
 }
 
 [class~=section-column-wrap] {
@@ -18825,6 +18825,12 @@ body[class~=home][class~=title-6] [class~=block-newsletter] [class~=newsletter-t
 
 [class~=block-parallax][class~=bg-img-3] {
   background-image: url("../img/earring-2.jpg");
+}
+[class~=block-parallax][class~=bg-img-5] {
+  background-image: url("../img/24kgold.jpg");
+}
+[class~=block-parallax][class~=bg-img-8] {
+  background-image: url("../img/nosepin-f.jpg");
 }
 
 [class~=block-instagram] a[class~=instagram]:hover img {
