@@ -18829,8 +18829,17 @@ body[class~=home][class~=title-6] [class~=block-newsletter] [class~=newsletter-t
 [class~=block-parallax][class~=bg-img-5] {
   background-image: url("../img/24kgold.jpg");
 }
+[class~=block-parallax][class~=bg-img-6] {
+  background-image: url("../img/pendants1.jpg");
+}
+[class~=block-parallax][class~=bg-img-7] {
+  background-image: url("../img/gold-coins-1.jpg");
+}
 [class~=block-parallax][class~=bg-img-8] {
   background-image: url("../img/nosepin-f.jpg");
+}
+[class~=block-parallax][class~=bg-img-9] {
+  background-image: url("../img/bracelets-1.jpg");
 }
 
 [class~=block-instagram] a[class~=instagram]:hover img {
