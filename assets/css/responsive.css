@@ -1178,6 +1178,9 @@
     display: block;
     text-align: center;
   }
+  .section-column {
+    max-width: 500px;
+  }
   .block-intro.layout-7 .intro-title {
     font-size: 22px;
     line-height: 30px;
