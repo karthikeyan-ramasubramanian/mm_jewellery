@@ -358,8 +358,8 @@
                                 <div class="banner-wrapper-infor" style="background-color: #e0c4b8;padding: 0px 15px;opacity: .75;border-radius:0px 0px 15px 15px;">
                                   <div class="info">
                                     <div class="content">
-                                      <h3 class="title-banner">22K Gold</h3>
-                                      <p class="button" style="color:#ff0909;font-size: 20px;" id="price22k">loading...</p>
+                                      <h3 class="title-banner">Today's Gold Rate</h3>
+                                      <p class="button" style="color:#ff0909;font-size: 20px;" id="goldprice22k">loading...</p>
                                     </div>
                                   </div>
                                 </div>
@@ -385,7 +385,7 @@
                                   <div class="info">
                                     <div class="content">
                                       <h3 class="title-banner">
-                                        24K Silver
+                                        Today's Silver Rate
                                       </h3>
                                       <p id="silverprice24k" style="color:#ff0909;font-size: 20px;" class="button">Loading...</p>
                                     </div>
@@ -465,7 +465,7 @@
                                     <img style="width:226px; height: 226px;"
                                       width="258"
                                       height="258"
-                                      src="assets/img/ring.jpg"
+                                      src="./assets/img/ring-2.jpg"
                                       alt="RINGS"
                                     />
                                   </div>
@@ -1340,7 +1340,7 @@
         <div></div>
       </div>
     </div>
-    <script>
+<!--     <script>
   
       async function fetchGoldRate() {
        
@@ -1363,32 +1363,47 @@ fetch("https://gold-api-f2jo.onrender.com/goldPrices", {
 
       // Call the function to fetch the gold rate when the page loads
       window.addEventListener('load', fetchGoldRate);
-  </script>
+  </script> -->
     <script>
-      //
-     
-  // 
-      async function fetchGoldRate() {
-       
+    
+     async function fetchRate() {
+        // fetch("https://gold-api-f2jo.onrender.com/silverPrices",  {
+        //   method: 'GET',
+        // })
+        //   .then(response => response.json())
+        //   .then(data =>  {
+        //     // console.log(data.price_gram_24k)
+        //     const price24kElement = document.getElementById("silverprice24k");
 
-fetch("https://gold-api-f2jo.onrender.com/silverPrices",  {
-  method: 'GET',
-})
-  .then(response => response.json())
-  .then(data =>  {
-    // console.log(data.price_gram_24k)
-    const price24kElement = document.getElementById("silverprice24k");
-  
-      // Update the content of the HTML elements
-      price24kElement.textContent = `₹${data.price_gram_24k}`;
-     
-  })
-  .catch(error => console.log('error', error));
+        //       // Update the content of the HTML elements
+        //       price24kElement.textContent = `₹${data.price_gram_24k}`;
 
+        //   })
+        //   .catch(error => console.log('error', error));
+
+        //       }
+        const spreadsheetId = "13zGo8kY0qIAeKfT0uxHRGjCEyOoJQOZGr7E5oHtLRKI";
+        const range = "Sheet1!A1:B2";
+        const apiKey = "AIzaSyAGjfO8MJzbF0ksQAQNwPhden8Qfx-DS_k";
+
+        fetch(
+          `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("received", data.values);
+            const gold = data.values[0][1];
+            const silver = data.values[1][1];
+            console.log(gold);
+            console.log(silver);
+            const goldprice24k = document.getElementById("goldprice22k");
+            const silverprice24k = document.getElementById("silverprice24k");
+            goldprice24k.textContent = `₹${gold}`;
+            silverprice24k.textContent = `₹${silver}`;
+          })
+          .catch((error) => console.error("Error fetching data", error));
       }
-
-      // Call the function to fetch the gold rate when the page loads
-      window.addEventListener('load', fetchGoldRate);
+      window.addEventListener("load", fetchRate);
   </script>
     <script>
       // Function to open the popup form
