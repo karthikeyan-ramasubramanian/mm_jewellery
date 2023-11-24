@@ -1595,3 +1595,8 @@
     font-size: 12px;
   }
 }
+@media (min-width: 890px){
+  .disp{
+    display: block;
+  }
+}
