@@ -1,554 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Data -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>collections | M M Jewellery</title>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="media/favicon.png" />
+<head>
+  <!-- Meta Data -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>collections | M M Jewellery</title>
 
-    <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" />
-    <!-- Dependency Styles -->
-    <link
-      rel="stylesheet"
-      href="libs/bootstrap/css/bootstrap.min.css"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="libs/feather-font/css/iconfont.css"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="libs/icomoon-font/css/icomoon.css"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="libs/font-awesome/css/font-awesome.css"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="libs/wpbingofont/css/wpbingofont.css"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="libs/elegant-icons/css/elegant.css"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="libs/slick/css/slick.css" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="libs/slick/css/slick-theme.css"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="libs/mmenu/css/mmenu.min.css"
-      type="text/css"
-    />
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="media/favicon.png" />
 
-    <!-- Site Stylesheet -->
-    <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" /><!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-940GWVQFMM">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-    <!-- Google Web Fonts -->
-    <link
-      href="../../../fonts.googleapis.com/css2eb94.css?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="../../../fonts.googleapis.com/css2ed52.css?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      /* Style the popup form container */
-      .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-940GWVQFMM');
+  </script>
+  <!-- Dependency Styles -->
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="libs/feather-font/css/iconfont.css" type="text/css" />
+  <link rel="stylesheet" href="libs/icomoon-font/css/icomoon.css" type="text/css" />
+  <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.css" type="text/css" />
+  <link rel="stylesheet" href="libs/wpbingofont/css/wpbingofont.css" type="text/css" />
+  <link rel="stylesheet" href="libs/elegant-icons/css/elegant.css" type="text/css" />
+  <link rel="stylesheet" href="libs/slick/css/slick.css" type="text/css" />
+  <link rel="stylesheet" href="libs/slick/css/slick-theme.css" type="text/css" />
+  <link rel="stylesheet" href="libs/mmenu/css/mmenu.min.css" type="text/css" />
+
+  <!-- Site Stylesheet -->
+  <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" /><!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-940GWVQFMM">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-940GWVQFMM');
+  </script>
+
+  <!-- Google Web Fonts -->
+  <link href="../../../fonts.googleapis.com/css2eb94.css?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
+  <link href="../../../fonts.googleapis.com/css2ed52.css?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap" rel="stylesheet" />
+  <style>
+    /* Style the popup form container */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,
           0,
           0,
-          0,
-          0.6
-        ); /* Semi-transparent black background */
-        backdrop-filter: blur(5px); /* Apply blur effect */
-        z-index: 998; /* Below the popup, but above the other content */
-      }
+          0.6);
+      /* Semi-transparent black background */
+      backdrop-filter: blur(5px);
+      /* Apply blur effect */
+      z-index: 998;
+      /* Below the popup, but above the other content */
+    }
 
-      .popup-form {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 20px;
-        background: #fff;
-        border: 1px solid #ccc;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        z-index: 999; /* Ensure it's above other content */
-      }
+    .popup-form {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      /* Ensure it's above other content */
+    }
 
-      /* Style the form elements */
-      .form-group {
-        margin-bottom: 10px;
-      }
+    /* Style the form elements */
+    .form-group {
+      margin-bottom: 10px;
+    }
 
-      /* Style the close button */
-      .close-button {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-      }
-    </style>
-  </head>
+    /* Style the close button */
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
 
-  <body class="home home-5">
-    <div id="page" class="hfeed page-wrapper">
-      <header id="site-header" class="site-header header-v1 color-white">
-        <div class="header-mobile">
-          <div class="section-padding">
-            <div class="section-container">
-              <div class="row">
-                <div
-                  class="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-3 header-left"
-                >
-                  <div class="navbar-header">
-                    <button
-                      type="button"
-                      id="show-megamenu"
-                      class="navbar-toggle"
-                    ></button>
-                  </div>
+<body class="home home-5">
+  <div id="page" class="hfeed page-wrapper">
+    <header id="site-header" class="site-header header-v1 color-white">
+      <div class="header-mobile">
+        <div class="section-padding">
+          <div class="section-container">
+            <div class="row">
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-3 header-left">
+                <div class="navbar-header">
+                  <button type="button" id="show-megamenu" class="navbar-toggle"></button>
                 </div>
-                <div
-                  class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 header-center"
-                >
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 header-center">
+                <div class="site-logo">
+                  <a href="index.html">
+                    <img width="400px" height="50px" src="assets/img/MM-logo-1-removebg-preview.png" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-desktop">
+        <div class="header-wrapper">
+          <div class="section-padding">
+            <div class="section-container large p-l-r">
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 header-left">
                   <div class="site-logo">
                     <a href="index.html">
-                      <img
-                        width="400px"
-                        height="50px"
-                        src="assets/img/MM-logo-1-removebg-preview.png"
-                       
-                      />
+                      <img width="400" height="140" src="assets/img/MM-logo-1-removebg-preview.png" alt="Mojuri – Jewelry Store HTML Template" />
                     </a>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="header-desktop">
-          <div class="header-wrapper">
-            <div class="section-padding">
-              <div class="section-container large p-l-r">
-                <div class="row">
-                  <div
-                    class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 header-left"
-                  >
-                    <div class="site-logo">
-                      <a href="index.html">
-                        <img
-                          width="400"
-                          height="140"
-                          src="assets/img/MM-logo-1-removebg-preview.png"
-                          alt="Mojuri – Jewelry Store HTML Template"
-                        />
-                      </a>
-                    </div>
-                  </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center header-center">
+                  <div class="site-navigation">
+                    <nav id="main-navigation">
+                      <ul id="menu-main-menu" class="menu">
+                        <li class="level-0 menu-item">
+                          <a href="index.html"><span class="menu-item-text">Home</span></a>
+                        </li>
+                        <li class="level-0 menu-item current-menu-item">
+                          <a href="page-collections.html"><span class="menu-item-text">Collections</span></a>
+                        </li>
+                        <li class="level-0 menu-item">
+                          <a href="page-about.html"><span class="menu-item-text">About Us</span></a>
+                        </li>
+                        <li class="level-0 menu-item">
+                          <a href="page-faq.html"><span class="menu-item-text">FAQ</span></a>
+                        </li>
 
-                  <div
-                    class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center header-center"
-                  >
-                    <div class="site-navigation">
-                      <nav id="main-navigation">
-                        <ul id="menu-main-menu" class="menu">
-                          <li class="level-0 menu-item">
-                            <a href="index.html"
-                              ><span class="menu-item-text">Home</span></a
-                            >
-                          </li>
-                          <li class="level-0 menu-item current-menu-item">
-                            <a href="page-collections.html"
-                              ><span class="menu-item-text"
-                                >Collections</span
-                              ></a
-                            >
-                          </li>
-                          <li class="level-0 menu-item">
-                            <a href="page-about.html"
-                              ><span class="menu-item-text">About Us</span></a
-                            >
-                          </li>
-                          <li class="level-0 menu-item">
-                            <a href="page-faq.html"
-                              ><span class="menu-item-text">FAQ</span></a
-                            >
-                          </li>
-
-                          <li class="level-0 menu-item">
-                            <a href="page-contact.html"
-                              ><span class="menu-item-text">Contact</span></a
-                            >
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
+                        <li class="level-0 menu-item">
+                          <a href="page-contact.html"><span class="menu-item-text">Contact</span></a>
+                        </li>
+                      </ul>
+                    </nav>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </header>
-
-      <div id="site-main" class="site-main">
-        <div id="main-content" class="main-content">
-          <div id="primary" class="content-area">
-            <div id="content" class="site-content" role="main">
-              <section class="section m-b-0">
-                <!-- Block Parallax -->
-                <div class="block block-parallax bg-img-1 image-center">
-                  <div class="section-container">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="content">
-                          
-                          <h2 class="title">Rings</h2>
-                          <div class="description">
-                            Brighten up your look with vibrant gemstone jewelry.
-                          </div>
-                          
-                        </div>
-                      </div>
-                      <div class="col-md-6"></div>
-                    </div>
-                  </div>
-                  <div class="go-to-section">
-                    <div class="go-to-button"></div>
-                    <div class="go-to-text"></div>
-                  </div>
-                </div>
-              </section>
-
-              <section class="section m-b-0" id="section-2">
-                <!-- Block Parallax -->
-                <div class="block block-parallax bg-img-2 right-text">
-                  <div class="section-container">
-                    <div class="row">
-                      <div class="col-md-6"></div>
-                      <div class="col-md-6">
-                        <div class="content">
-                          <h2 class="title">Necklaces</h2>
-                          <div class="description">
-                            Introducing your outfit’s missing link.
-                          </div>
-                          <a
-                            class="button button-white button-outline thick-border button-arrow animation-horizontal"
-                            href="javascript:void(0);"
-                            onclick="openPopupForm('Necklaces')"
-                            >Order Now</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section class="section m-b-0">
-                <!-- Block Parallax -->
-                <div class="block block-parallax bg-img-3 bg-top-center">
-                  <div class="section-container">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="content">
-                          <h2 class="title">Earrings</h2>
-                          <div class="description">
-                            Brighten up your look with vibrant gemstone jewelry.
-                          </div>
-                          <a
-                            class="button button-white button-outline thick-border button-arrow animation-horizontal"
-                            href="javascript:void(0);"
-                            onclick="openPopupForm('Earrings')"
-                            >Order Now</a
-                          >
-                        </div>
-                      </div>
-                      <div class="col-md-6"></div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section class="section m-b-0">
-                <!-- Block Parallax -->
-                <div class="block block-parallax bg-img-4 right-text">
-                  <div class="section-container">
-                    <div class="row">
-                      <div class="col-md-6"></div>
-                      <div class="col-md-6">
-                        <div class="content">
-                          <h2 class="title">Bangles
-                          </h2>
-                          <div class="description">
-                            Introducing your outfit’s missing link.
-                          </div>
-                          <a
-                            class="button button-white button-outline thick-border button-arrow animation-horizontal"
-                            href="javascript:void(0);"
-                            onclick="openPopupForm('Charms')"
-                            >Order Now</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="section m-b-0">
-                <!-- Block Parallax -->
-                <div class="block block-parallax bg-img-5 right-text">
-                  <div class="section-container">
-                    <div class="row">
-                      <div class="col-md-6"></div>
-                      <div class="col-md-6">
-                        <div class="content">
-                          <h2 class="title">Chains
-                          </h2>
-                          <div class="description">
-                            Introducing your outfit’s missing link.
-                          </div>
-                          <a
-                            class="button button-white button-outline thick-border button-arrow animation-horizontal"
-                            href="javascript:void(0);"
-                            onclick="openPopupForm('CHAINS')"
-                            >Order Now</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="section m-b-0">
-                <!-- Block Parallax -->
-                <div class="block block-parallax bg-img-6 right-text">
-                  <div class="item-image animation-horizontal"></div>
-                  <div class="section-container">
-                    <div class="row">
-                      <div class="col-md-6"></div>
-                      <div class="col-md-6">
-                        <div class="content">
-                          <h2 class="title">pendants
-                          </h2>
-                          <div class="description">
-                            Introducing your outfit’s missing link.
-                          </div>
-                          <a
-                            class="button button-white button-outline thick-border button-arrow animation-horizontal"
-                            href="javascript:void(0);" onclick="openPopupForm('BANGLES')"
-                            >Order Now</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="section m-b-0">
-                <!-- Block Parallax -->
-                <div class="block block-parallax bg-img-7 right-text">
-                  <div class="section-container">
-                    <div class="row">
-                      <div class="col-md-6"></div>
-                      <div class="col-md-6">
-                        <div class="content">
-                          <h2 class="title">Gold Coins
-                          </h2>
-                          <div class="description">
-                            Introducing your outfit’s missing link.
-                          </div>
-                          <a
-                            class="button button-white button-outline thick-border button-arrow animation-horizontal"
-                            href="javascript:void(0);" 
-                            onclick="openPopupForm('NOSE PINS')"
-                            >Order Now</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="section m-b-0">
-                <!-- Block Parallax -->
-                <div class="block block-parallax bg-img-8 right-text">
-                  <div class="section-container">
-                    <div class="row">
-                      <div class="col-md-6"></div>
-                      <div class="col-md-6">
-                        <div class="content">
-                          <h2 class="title">Nose Pins
-                          </h2>
-                          <div class="description">
-                            Introducing your outfit’s missing link.
-                          </div>
-                          <a
-                            class="button button-white button-outline thick-border button-arrow animation-horizontal"
-                            href="javascript:void(0);" 
-                            onclick="openPopupForm('NOSE PINS')"
-                            >Order Now</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="section m-b-0">
-                <!-- Block Parallax -->
-                <div class="block block-parallax bg-img-9 right-text">
-                  <div class="section-container">
-                    <div class="row">
-                      <div class="col-md-6"></div>
-                      <div class="col-md-6">
-                        <div class="content">
-                          <h2 class="title">Bracelets
-                          </h2>
-                          <div class="description">
-                            Introducing your outfit’s missing link.
-                          </div>
-                          <a
-                            class="button button-white button-outline thick-border button-arrow animation-horizontal"
-                            href="javascript:void(0);" onclick="openPopupForm('Bracelets')"
-                            >Order Now</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-            <!-- #content -->
-          </div>
-          <!-- #primary -->
-        </div>
-        <!-- #main-content -->
       </div>
+    </header>
 
-      <footer id="site-footer" class="site-footer background four-columns">
-        <div class="footer">
-          <div class="section-padding">
-            <div class="section-container">
-              <div class="block-widget-wrap">
-                <div class="row " style="flex-wrap:wrap;">
-                  <div class="col-lg-6 col-md-6 column-1">
-                    <div class="block block-menu m-b-20">
-                      <h2 class="block-title">Contact Us</h2>
-                      <div class="block-content">
-                        <ul>
-                          <li>
-                            <span>Head Office:</span> M.M Building, 76,
-                            Meenakshipuram, Nagercoil, Nagercoil, Tamil Nadu
-                            629001
-                          </li>
-                          <li>
-                            <span>Phone:</span>
-                            <a href="tel:+917810072788">917810072788</a>
-                          </li>
-                          <li>
-                            <span>Email:</span>
-                            <a href="mailto:support@mojuri.com"
-                              >mmjewellers5656@gmail.com</a
-                            >
-                          </li>
-                        </ul>
+    <div id="site-main" class="site-main">
+      <div id="main-content" class="main-content">
+        <div id="primary" class="content-area">
+          <div id="content" class="site-content" role="main">
+            <section class="section m-b-0">
+              <!-- Block Parallax -->
+              <div class="block block-parallax bg-img-1 image-center">
+                <div class="section-container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="content">
+
+                        <h2 class="title">Rings</h2>
+                        <div class="description">
+                          Brighten up your look with vibrant gemstone jewelry.
+                        </div>
+
                       </div>
                     </div>
+                    <div class="col-md-6"></div>
+                  </div>
+                </div>
+                <div class="go-to-section">
+                  <div class="go-to-button"></div>
+                  <div class="go-to-text"></div>
+                </div>
+              </div>
+            </section>
 
-                    <div class="block block-social">
-                      <ul class="social-link">
+            <section class="section m-b-0" id="section-2">
+              <!-- Block Parallax -->
+              <div class="block block-parallax bg-img-2 right-text">
+                <div class="section-container">
+                  <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                      <div class="content">
+                        <h2 class="title">Necklaces</h2>
+                        <div class="description">
+                          Introducing your outfit’s missing link.
+                        </div>
+                        <a class="button button-white button-outline thick-border button-arrow animation-horizontal" href="javascript:void(0);" onclick="openPopupForm('Necklaces')">Order Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="section m-b-0">
+              <!-- Block Parallax -->
+              <div class="block block-parallax bg-img-3 bg-top-center">
+                <div class="section-container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="content">
+                        <h2 class="title">Earrings</h2>
+                        <div class="description">
+                          Brighten up your look with vibrant gemstone jewelry.
+                        </div>
+                        <a class="button button-white button-outline thick-border button-arrow animation-horizontal" href="javascript:void(0);" onclick="openPopupForm('Earrings')">Order Now</a>
+                      </div>
+                    </div>
+                    <div class="col-md-6"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="section m-b-0">
+              <!-- Block Parallax -->
+              <div class="block block-parallax bg-img-4 right-text">
+                <div class="section-container">
+                  <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                      <div class="content">
+                        <h2 class="title">Bangles
+                        </h2>
+                        <div class="description">
+                          Introducing your outfit’s missing link.
+                        </div>
+                        <a class="button button-white button-outline thick-border button-arrow animation-horizontal" href="javascript:void(0);" onclick="openPopupForm('Charms')">Order Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section m-b-0">
+              <!-- Block Parallax -->
+              <div class="block block-parallax bg-img-5 right-text">
+                <div class="section-container">
+                  <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                      <div class="content">
+                        <h2 class="title">Chains
+                        </h2>
+                        <div class="description">
+                          Introducing your outfit’s missing link.
+                        </div>
+                        <a class="button button-white button-outline thick-border button-arrow animation-horizontal" href="javascript:void(0);" onclick="openPopupForm('CHAINS')">Order Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section m-b-0">
+              <!-- Block Parallax -->
+              <div class="block block-parallax bg-img-6 right-text">
+                <div class="item-image animation-horizontal"></div>
+                <div class="section-container">
+                  <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                      <div class="content">
+                        <h2 class="title">pendants
+                        </h2>
+                        <div class="description">
+                          Introducing your outfit’s missing link.
+                        </div>
+                        <a class="button button-white button-outline thick-border button-arrow animation-horizontal" href="javascript:void(0);" onclick="openPopupForm('BANGLES')">Order Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section m-b-0">
+              <!-- Block Parallax -->
+              <div class="block block-parallax bg-img-7 right-text">
+                <div class="section-container">
+                  <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                      <div class="content">
+                        <h2 class="title">Gold Coins
+                        </h2>
+                        <div class="description">
+                          Introducing your outfit’s missing link.
+                        </div>
+                        <a class="button button-white button-outline thick-border button-arrow animation-horizontal" href="javascript:void(0);" onclick="openPopupForm('NOSE PINS')">Order Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section m-b-0">
+              <!-- Block Parallax -->
+              <div class="block block-parallax bg-img-8 right-text">
+                <div class="section-container">
+                  <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                      <div class="content">
+                        <h2 class="title">Nose Pins
+                        </h2>
+                        <div class="description">
+                          Introducing your outfit’s missing link.
+                        </div>
+                        <a class="button button-white button-outline thick-border button-arrow animation-horizontal" href="javascript:void(0);" onclick="openPopupForm('NOSE PINS')">Order Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section m-b-0">
+              <!-- Block Parallax -->
+              <div class="block block-parallax bg-img-9 right-text">
+                <div class="section-container">
+                  <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                      <div class="content">
+                        <h2 class="title">Bracelets
+                        </h2>
+                        <div class="description">
+                          Introducing your outfit’s missing link.
+                        </div>
+                        <a class="button button-white button-outline thick-border button-arrow animation-horizontal" href="javascript:void(0);" onclick="openPopupForm('Bracelets')">Order Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- #content -->
+        </div>
+        <!-- #primary -->
+      </div>
+      <!-- #main-content -->
+    </div>
+
+    <footer id="site-footer" class="site-footer background four-columns">
+      <div class="footer">
+        <div class="section-padding">
+          <div class="section-container">
+            <div class="block-widget-wrap">
+              <div class="row " style="flex-wrap:wrap;">
+                <div class="col-lg-6 col-md-6 column-1">
+                  <div class="block block-menu m-b-20">
+                    <h2 class="block-title">Contact Us</h2>
+                    <div class="block-content">
+                      <ul>
                         <li>
-                          <a href="https://www.instagram.com/mm_jwellers/"
-                            ><i class="fa fa-instagram"></i
-                          ></a>
+                          <span>Head Office:</span> M.M Building, 76,
+                          Meenakshipuram, Nagercoil, Nagercoil, Tamil Nadu
+                          629001
                         </li>
                         <li>
-                          <a href="#"><i class="fa fa-facebook"></i></a>
+                          <span>Phone:</span>
+                          <a href="tel:+917810072788">917810072788</a>
+                        </li>
+                        <li>
+                          <span>Email:</span>
+                          <a href="mailto:support@mojuri.com">mmjewellers5656@gmail.com</a>
                         </li>
                       </ul>
                     </div>
                   </div>
 
-                    <div class="col-lg-6 col-md-6 column-4 disp">
-                      <div class="block block-menu">
-                        <h2 class="block-title">USEFUL links</h2>
-                        <div class="block-content">
-                          <ul>
-                            <li>
-                              <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                              <a href="page-collections.html">Collections</a>
-                            </li>
-                            <li>
-                              <a href="page-about.html">About Us</a>
-                            </li>
-                            <li>
-                              <a href="page-contact.html">Contact Us</a>
-                            </li>
-                            <li>
-                              <a href="page-faq.html">FAQ</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <div class="section-padding">
-            <div class="section-container">
-              <div class="block-widget-wrap">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="footer-left">
-                      <p class="copyright">
-                        Copyright © 2023. All Right Reserved by M.M.jewellers
-                      </p>
-                      <p class="copyright">Designed by Techsnapie Solutions</p>
-                    </div>
+                  <div class="block block-social">
+                    <ul class="social-link">
+                      <li>
+                        <a href="https://www.instagram.com/mm_jwellers/"><i class="fa fa-instagram"></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="col-md-6">
-                    <div class="footer-right">
-                      <div class="block block-image">
-                        <img
-                          width="309"
-                          height="32"
-                          src="media/payments.png"
-                          alt=""
-                        />
-                      </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 column-4 disp">
+                  <div class="block block-menu">
+                    <h2 class="block-title">USEFUL links</h2>
+                    <div class="block-content">
+                      <ul>
+                        <li>
+                          <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                          <a href="page-collections.html">Collections</a>
+                        </li>
+                        <li>
+                          <a href="page-about.html">About Us</a>
+                        </li>
+                        <li>
+                          <a href="page-contact.html">Contact Us</a>
+                        </li>
+                        <li>
+                          <a href="page-faq.html">FAQ</a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -556,134 +438,128 @@
             </div>
           </div>
         </div>
-      </footer>
-    </div>
-    <!-- form -->
-    <div class="overlay" id="overlay"></div>
-
-    <div class="popup-form" id="popupForm">
-      <span class="close-button" onclick="closePopupForm()">&times;</span>
-      <h2>Contact Form</h2>
-      <form id="contactForm" onsubmit="constructWhatsAppMessage(event)">
-        <div class="form-group">
-          <input
-            type="text"
-            name="name"
-            class="form-control"
-            id="name"
-            placeholder="Your Name"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <input
-            type="email"
-            class="form-control"
-            name="email"
-            id="email"
-            placeholder="Your Email"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <input
-            type="number"
-            class="form-control"
-            name="mobile"
-            id="mobile"
-            placeholder="Your Mobile Number"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control"
-            name="jewelType"
-            id="jewelType"
-            placeholder="Jewel Type"
-            required
-          />
-        </div>
-        <div class="modal-footer" style="justify-content: center">
-          <button
-            type="button"
-            onclick="closePopupForm()"
-            class="btn btn-secondary"
-          >
-            Close
-          </button>
-          <button type="submit" class="btn btn-primary">Send</button>
-        </div>
-      </form>
-    </div>
-    <!-- Back Top button -->
-    <div class="back-top button-show">
-      <i class="arrow_carrot-up"></i>
-    </div>
-
-    <!-- Page Loader -->
-    <div class="page-preloader">
-      <div class="loader">
-        <div></div>
-        <div></div>
       </div>
+      <div class="footer-bottom">
+        <div class="section-padding">
+          <div class="section-container">
+            <div class="block-widget-wrap">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="footer-left">
+                    <p class="copyright">
+                      Copyright © 2023. All Right Reserved by M.M.jewellers
+                    </p>
+                    <p class="copyright">Designed by Techsnapie Solutions</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="footer-right">
+                    <div class="block block-image">
+                      <img width="309" height="32" src="media/payments.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- form -->
+  <div class="overlay" id="overlay"></div>
+
+  <div class="popup-form" id="popupForm">
+    <span class="close-button" onclick="closePopupForm()">&times;</span>
+    <h2>Contact Form</h2>
+    <form id="contactForm" onsubmit="constructWhatsAppMessage(event)">
+      <div class="form-group">
+        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required />
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required />
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" name="mobile" id="mobile" placeholder="Your Mobile Number" required />
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="jewelType" id="jewelType" placeholder="Jewel Type" required />
+      </div>
+      <div class="modal-footer" style="justify-content: center">
+        <button type="button" onclick="closePopupForm()" class="btn btn-secondary">
+          Close
+        </button>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </div>
+    </form>
+  </div>
+  <!-- Back Top button -->
+  <div class="back-top button-show">
+    <i class="arrow_carrot-up"></i>
+  </div>
+
+  <!-- Page Loader -->
+  <div class="page-preloader">
+    <div class="loader">
+      <div></div>
+      <div></div>
     </div>
+  </div>
 
-    <!-- Dependency Scripts -->
-    <script src="libs/popper/js/popper.min.js"></script>
-    <script src="libs/jquery/js/jquery.min.js"></script>
-    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
-    <script src="libs/slick/js/slick.min.js"></script>
-    <script src="libs/mmenu/js/jquery.mmenu.all.min.js"></script>
-    <script>
-      // Function to open the popup form
-      function openPopupForm(jewelType) {
-        const popupForm = document.getElementById("popupForm");
-        const jewelTypeInput = document.getElementById("jewelType");
-        const overlay = document.getElementById("overlay");
-        jewelTypeInput.value = jewelType;
-        popupForm.style.display = "block";
-        overlay.style.display = "block";
-        body.style.overflow = "hidden";
-      }
+  <!-- Dependency Scripts -->
+  <script src="libs/popper/js/popper.min.js"></script>
+  <script src="libs/jquery/js/jquery.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="libs/slick/js/slick.min.js"></script>
+  <script src="libs/mmenu/js/jquery.mmenu.all.min.js"></script>
+  <script>
+    // Function to open the popup form
+    function openPopupForm(jewelType) {
+      const popupForm = document.getElementById("popupForm");
+      const jewelTypeInput = document.getElementById("jewelType");
+      const overlay = document.getElementById("overlay");
+      jewelTypeInput.value = jewelType;
+      popupForm.style.display = "block";
+      overlay.style.display = "block";
+      body.style.overflow = "hidden";
+    }
 
-      // Function to close the popup form
-      function closePopupForm() {
-        const popupForm = document.getElementById("popupForm");
-        const overlay = document.getElementById("overlay");
-        const body = document.body;
+    // Function to close the popup form
+    function closePopupForm() {
+      const popupForm = document.getElementById("popupForm");
+      const overlay = document.getElementById("overlay");
+      const body = document.body;
 
-        popupForm.style.display = "none";
-        overlay.style.display = "none";
-        body.style.overflow = "auto";
-      }
-    </script>
-    <script>
-      function constructWhatsAppMessage(event) {
-        event.preventDefault(); // Prevent the default form submission behavior
+      popupForm.style.display = "none";
+      overlay.style.display = "none";
+      body.style.overflow = "auto";
+    }
+  </script>
+  <script>
+    function constructWhatsAppMessage(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
 
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const mobile = document.getElementById("mobile").value;
-        const jewelType = document.getElementById("jewelType").value;
-        const popupForm = document.getElementById("popupForm");
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const mobile = document.getElementById("mobile").value;
+      const jewelType = document.getElementById("jewelType").value;
+      const popupForm = document.getElementById("popupForm");
 
-        // Construct the WhatsApp message, including the jewel type
-        const message = `Hello, this is ${name}. I'm interested in a ${jewelType}. My email is ${email}, and my mobile number is ${mobile}.`;
+      // Construct the WhatsApp message, including the jewel type
+      const message = `Hello, this is ${name}. I'm interested in a ${jewelType}. My email is ${email}, and my mobile number is ${mobile}.`;
 
-        // Construct the WhatsApp message URL
-        const whatsappUrl = `https://wa.me/+917810072788?text=${encodeURIComponent(
+      // Construct the WhatsApp message URL
+      const whatsappUrl = `https://wa.me/+917810072788?text=${encodeURIComponent(
           message
         )}`;
 
-        // Redirect to WhatsApp with the constructed message
-        window.location.href = whatsappUrl;
-        popupForm.style.display = "none";
-      }
-    </script>
-    <!-- Site Scripts -->
-    <script src="assets/js/app.js"></script>
-  </body>
+      // Redirect to WhatsApp with the constructed message
+      window.location.href = whatsappUrl;
+      popupForm.style.display = "none";
+    }
+  </script>
+  <!-- Site Scripts -->
+  <script src="assets/js/app.js"></script>
+</body>
 
 </html>
